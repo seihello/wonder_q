@@ -11,6 +11,9 @@ void main() {
 
   columnChildren.add(ElevatedButton(
     onPressed: () => debugPrint("button pressed"),
+    style: ElevatedButton.styleFrom(
+      padding: const EdgeInsets.fromLTRB(30, 20, 30, 20)
+    ),
     child: const Text("Next Question")
   ));
 
