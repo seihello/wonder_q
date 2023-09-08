@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  const app = MaterialApp(
+    home: Scaffold(
+      body: Center(
+        child: Column(
+          // mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text("WonderQ"),
+            Text("If you could have an extra hand, where would you want it to be?", textAlign: TextAlign.center,),
+            Text("Click the Button")
+          ]
+        ),
+      ),
+    )
+  );
+  runApp(app);
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
