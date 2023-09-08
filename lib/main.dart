@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  const app = MaterialApp(
+  final column = Column(
+    // mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      // Image.network('https://flagsapi.com/BE/flat/64.png'),
+      Image.asset('assets/img/chat.jpg', width: 100, height: 100),
+      const Text("WonderQ"),
+      const Text("If you could have an extra hand, where would you want it to be?", textAlign: TextAlign.center,),
+      const Text("Click the Button")
+    ]
+  );
+  final app = MaterialApp(
     home: Scaffold(
       body: Center(
-        child: Column(
-          // mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text("WonderQ"),
-            Text("If you could have an extra hand, where would you want it to be?", textAlign: TextAlign.center,),
-            Text("Click the Button")
-          ]
-        ),
+        child: column,
       ),
     )
   );
