@@ -17,7 +17,8 @@ void main() {
   );
   final app = MaterialApp(
     home: Scaffold(
-      body: Center(
+      body: Container(
+        padding: const EdgeInsets.all(20),
         child: column,
       ),
     )
