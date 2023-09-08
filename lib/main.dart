@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'questions.dart';
 
 void main() {
+  final List<Widget> columnChildren = [];
+  columnChildren.add(Image.asset('assets/img/chat.jpg', width: 100, height: 100)); // Image.network('https://flagsapi.com/BE/flat/64.png'),
+  columnChildren.add(const Text("WonderQ"));
+  for(final question in Questions.questions) {
+    columnChildren.add(Text(question));
+  }
+  columnChildren.add(const Text("Click the Button"));
+
   final column = Column(
     // mainAxisSize: MainAxisSize.min,
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      // Image.network('https://flagsapi.com/BE/flat/64.png'),
-      Image.asset('assets/img/chat.jpg', width: 100, height: 100),
-      const Text("WonderQ"),
-      const Text("If you could have an extra hand, where would you want it to be?", textAlign: TextAlign.center,),
-      const Text("Click the Button")
-    ]
+    children: columnChildren
   );
   final app = MaterialApp(
     home: Scaffold(
