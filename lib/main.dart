@@ -8,7 +8,11 @@ void main() {
   for(final question in Questions.questions) {
     columnChildren.add(Text(question));
   }
-  columnChildren.add(const Text("Click the Button"));
+
+  columnChildren.add(ElevatedButton(
+    onPressed: () => debugPrint("button pressed"),
+    child: const Text("Next Question")
+  ));
 
   final column = Column(
     // mainAxisSize: MainAxisSize.min,
