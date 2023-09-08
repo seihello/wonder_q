@@ -4,15 +4,23 @@ import 'questions.dart';
 void main() {
   final List<Widget> columnChildren = [];
   columnChildren.add(Image.asset('assets/img/chat.jpg', width: 100, height: 100)); // Image.network('https://flagsapi.com/BE/flat/64.png'),
-  columnChildren.add(const Text("WonderQ"));
+  columnChildren.add(const Text(
+    "WonderQ",
+    style: TextStyle(
+      fontSize: 32
+    ),
+  ));
   for(final question in Questions.questions) {
-    columnChildren.add(Text(question));
+    columnChildren.add(Text(
+      question,
+    ));
   }
 
   columnChildren.add(ElevatedButton(
     onPressed: () => debugPrint("button pressed"),
     style: ElevatedButton.styleFrom(
-      padding: const EdgeInsets.fromLTRB(30, 20, 30, 20)
+      padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+      // backgroundColor: Colors.red
     ),
     child: const Text("Next Question")
   ));
