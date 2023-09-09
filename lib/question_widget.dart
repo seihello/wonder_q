@@ -28,7 +28,7 @@ class QuestionWidget extends ConsumerWidget {
     columnChildren.add(ElevatedButton(
       onPressed: () {
         final notifier = ref.read(questionProvider.notifier);
-        notifier.state = "aaaaa";
+        notifier.state = Questions.questions[math.Random().nextInt(Questions.questions.length)];
       },
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
