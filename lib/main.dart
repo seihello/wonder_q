@@ -1,44 +1,19 @@
 import 'package:flutter/material.dart';
-import 'questions.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:wonder_q/question_widget.dart';
+
+
 
 void main() {
-  final List<Widget> columnChildren = [];
-  columnChildren.add(Image.asset('assets/img/chat.jpg', width: 100, height: 100)); // Image.network('https://flagsapi.com/BE/flat/64.png'),
-  columnChildren.add(const Text(
-    "WonderQ",
-    style: TextStyle(
-      fontSize: 32
-    ),
-  ));
-  for(final question in Questions.questions) {
-    columnChildren.add(Text(
-      question,
-    ));
-  }
-
-  columnChildren.add(ElevatedButton(
-    onPressed: () => debugPrint("button pressed"),
-    style: ElevatedButton.styleFrom(
-      padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-      // backgroundColor: Colors.red
-    ),
-    child: const Text("Next Question")
-  ));
-
-  final column = Column(
-    // mainAxisSize: MainAxisSize.min,
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: columnChildren
+  
+  const app = MaterialApp(
+    home: QuestionWidget()
   );
-  final app = MaterialApp(
-    home: Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: column,
-      ),
-    )
-  );
-  runApp(app);
+  
+  
+  final scope = ProviderScope(child: app);
+  runApp(scope);
+
   // runApp(const MyApp());
 }
 
