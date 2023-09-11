@@ -23,7 +23,7 @@ class QuestionWidget extends ConsumerWidget {
         fontSize: 32
       ),
     ));
-    columnChildren.add(Text(question));
+    columnChildren.add(Text(question, textAlign: TextAlign.center));
 
     columnChildren.add(ElevatedButton(
       onPressed: () {
