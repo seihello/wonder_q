@@ -35,3 +35,9 @@ $ flutter run
 ```
 or  
 Use VSCode extension and click Run above the main function
+
+## Build for iOS
+1. Open /Users/seisuke/Project/wonder_q/ios/Runner.xcodeproj
+
+## Reference
+https://qiita.com/kasa_le/items/fed9f25b92091bd162ce
